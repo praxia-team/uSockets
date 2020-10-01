@@ -17,8 +17,8 @@
 
 #ifdef LIBUS_USE_WOLFSSL
 
-#include "libusockets.h"
-#include "internal/internal.h"
+#include <libusockets.h>
+#include <internal/internal.h>
 
 /* This module contains the entire WolfSSL implementation
  * of the SSL socket and socket context interfaces. */

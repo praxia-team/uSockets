@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-#include "libusockets.h"
-#include "internal/internal.h"
+#include <libusockets.h>
+#include <internal/internal.h>
 #include <stdlib.h>
 
 /* The loop has 2 fallthrough polls */

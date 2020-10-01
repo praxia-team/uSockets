@@ -17,8 +17,8 @@
 
 /* Todo: this file should lie in networking/bsd.c */
 
-#include "libusockets.h"
-#include "internal/internal.h"
+#include <libusockets.h>
+#include <internal/internal.h>
 
 #include <stdio.h>
 

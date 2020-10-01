@@ -12,3 +12,4 @@ add_library(uSockets
             src/loop.c
             src/socket.c
             )
+target_include_directories(uSockets PUBLIC src)
