@@ -18,7 +18,7 @@
 #ifndef EPOLL_KQUEUE_H
 #define EPOLL_KQUEUE_H
 
-#include "internal/loop_data.h"
+#include <internal/loop_data.h>
 
 #ifdef LIBUS_USE_EPOLL
 #include <sys/epoll.h>

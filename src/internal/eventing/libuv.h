@@ -18,7 +18,7 @@
 #ifndef LIBUV_H
 #define LIBUV_H
 
-#include "internal/loop_data.h"
+#include <internal/loop_data.h>
 
 #include <uv.h>
 #define LIBUS_SOCKET_READABLE UV_READABLE

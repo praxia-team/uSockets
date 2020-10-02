@@ -25,7 +25,7 @@
 #endif
 
 /* We only have one networking implementation so far */
-#include "internal/networking/bsd.h"
+#include <internal/networking/bsd.h>
 
 /* We have many different eventing implementations */
 #if defined(LIBUS_USE_EPOLL) || defined(LIBUS_USE_KQUEUE)
