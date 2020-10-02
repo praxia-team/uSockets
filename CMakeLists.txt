@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED True)
-#set(BUILD_SHARED_LIBS True)
+set(BUILD_SHARED_LIBS True)
 
 find_library(LIBUV uv /usr/local/lib)
 find_library(LIBSSL ssl /usr/local/opt/openssl)
