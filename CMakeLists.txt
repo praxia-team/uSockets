@@ -22,6 +22,9 @@ add_library(uSockets
 target_link_libraries(uSockets 
                       "/usr/local/opt/openssl/lib/libssl.a"
                       "/usr/local/opt/openssl/lib/crypto.a")
-target_include_directories(uSockets PUBLIC src)
+target_include_directories(uSockets PUBLIC 
+                           "src" 
+                           "/usr/local/opt/openssl/include"
+                           )
 
 target_compile_definitions(uSockets PUBLIC LIBUS_USE_OPENSSL)
