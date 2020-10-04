@@ -8,9 +8,14 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED True)
 #set(BUILD_SHARED_LIBS True)
 
+if(APPLE)
+    set(LIBSSL /usr/local/opt/openssl/lib/libssl.dylib)
+    set(LIBCRYPTO /usr/local/opt/openssl/lib/libcrypto.dylib)
+else()
+    find_library(LIBSSL ssl)
+    find_library(LIBCRYPTO crypto)
+endif()
 find_library(LIBUV uv)
-find_library(LIBSSL ssl)
-find_library(LIBCRYPTO crypto)
 
 add_library(uSockets STATIC 
             src/crypto/openssl.c 
