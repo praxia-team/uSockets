@@ -8,9 +8,9 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED True)
 #set(BUILD_SHARED_LIBS True)
 
-find_library(LIBUV uv /usr/local/lib)
-#find_library(LIBSSL ssl /usr/local/opt/openssl)
-#find_library(LIBCRYPTO crypto /usr/local/opt/openssl)
+find_library(LIBUV uv)
+find_library(LIBSSL ssl)
+find_library(LIBCRYPTO crypto)
 
 add_library(uSockets STATIC 
             src/crypto/openssl.c 
@@ -25,5 +25,6 @@ add_library(uSockets STATIC
             src/crypto/sni_tree.cpp
             )
 target_compile_definitions(uSockets PUBLIC LIBUS_USE_OPENSSL LIBUS_USE_LIBUV )
-target_link_libraries(uSockets ${LIBUV} /usr/local/opt/openssl/lib/libcrypto.a /usr/local/opt/openssl/lib/libssl.a)
+target_link_libraries(uSockets ${LIBUV} ${LIBSSL} ${LIBCRYPTO})
+#target_link_libraries(uSockets ${LIBUV} /usr/local/opt/openssl/lib/libcrypto.a /usr/local/opt/openssl/lib/libssl.a)
 target_include_directories(uSockets PUBLIC "src" "/usr/local/opt/openssl/include" "/usr/local/opt/libuv/include")
