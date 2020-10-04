@@ -31,5 +31,4 @@ add_library(uSockets STATIC
             )
 target_compile_definitions(uSockets PUBLIC LIBUS_USE_OPENSSL LIBUS_USE_LIBUV )
 target_link_libraries(uSockets ${LIBUV} ${LIBSSL} ${LIBCRYPTO})
-#target_link_libraries(uSockets ${LIBUV} /usr/local/opt/openssl/lib/libcrypto.a /usr/local/opt/openssl/lib/libssl.a)
 target_include_directories(uSockets PUBLIC "src" "/usr/local/opt/openssl/include" "/usr/local/opt/libuv/include")
